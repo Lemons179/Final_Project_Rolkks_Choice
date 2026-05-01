@@ -11,6 +11,11 @@ public class FollowCam : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (target == null)
+        {
+            return;
+        }
+
         //transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
 
         Vector3 targetPosition = new Vector3(target.position.x, target.position.y, transform.position.z);
