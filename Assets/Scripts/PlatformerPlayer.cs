@@ -48,10 +48,10 @@ public class PlatformerPlayer : MonoBehaviour
             grounded = true;
         }
 
-        MovingPlatform platform = null;
+        MovingTilePlatform platform = null;
         if (grounded)
         {
-            platform = hit.GetComponent<MovingPlatform>();
+            platform = hit.GetComponent<MovingTilePlatform>();
         }
 
         if (platform != null)

@@ -55,22 +55,4 @@ public class MovingTilePlatform : MonoBehaviour
         // Draw the platform path in the Scene view.
         Debug.DrawLine(posA.position, posB.position, Color.red);
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        // Parent the player to the platform on contact.
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            collision.transform.SetParent(transform);
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        // Remove the player from the platform on exit.
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            collision.transform.SetParent(null);
-        }
-    }
 }
