@@ -12,15 +12,19 @@ public class coinCounter : MonoBehaviour
     void Start()
     {
         counterText = GetComponent<TMP_Text>();
+        // Display the starting coin count.
+        UpdateCounterText();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Set the current number of coins to display
-        if (counterText.text != Coin2D.totalCoins.ToString())
-        {
-            counterText.text = Coin2D.totalCoins.ToString();
-        }
+        // Refresh the displayed coin count.
+        UpdateCounterText();
+    }
+    void UpdateCounterText()
+    {
+        // Display collected coins out of total coins.
+        counterText.text = Coin2D.collectedCoins + " / " + Coin2D.maxCoins;
     }
 }
