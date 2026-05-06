@@ -98,7 +98,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-
+    // REMOVE WHEN REAL IMPLEMENTATION OF GAME OVER IS CREATED
     void Update()
     {
         // Temporary test input for game over.
