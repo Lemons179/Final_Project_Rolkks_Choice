@@ -9,8 +9,6 @@ public class Coin2D : MonoBehaviour
 
     void Awake()
     {
-        // Count this coin as part of the level's total coin count.
-        maxCoins++;
         Collider2D coinCollider = GetComponent<CircleCollider2D>();
         if (coinCollider != null)
         {
@@ -24,8 +22,22 @@ public class Coin2D : MonoBehaviour
         {
             // Increase the collected coin count.
             collectedCoins++;
+
+            // Check whether all coins have been collected.
+            if (GameManager.instance != null)
+            {
+                GameManager.instance.CheckCoinsCollected();
+            }
+
             // Remove the collected coin from the scene.
             Destroy(gameObject);
         }
+    }
+
+    public static void ResetCoinCounts()
+    {
+        // Reset coin counts before the level coins count themselves.
+        collectedCoins = 0;
+        maxCoins = 0;
     }
 }
