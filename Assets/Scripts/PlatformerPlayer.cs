@@ -5,6 +5,13 @@ using UnityEngine.UIElements;
 
 public class PlatformerPlayer : MonoBehaviour
 {
+
+    // Position where the player returns after falling off the map.
+    public Transform respawnPoint;
+
+    // Y position below which the player is considered out of bounds.
+    public float fallLimitY = -20f;
+
     public float speed = 4.5f;
     public float jumpForce = 12f;
     public int extraJumpsMax = 1;
@@ -151,5 +158,23 @@ public class PlatformerPlayer : MonoBehaviour
 
         body.gravityScale = originalGravity;
         isDashing = false;
+        // Respawn the player if they fall below the level.
+        CheckFallRespawn();
+    }
+
+    private void CheckFallRespawn()
+    {
+        // Check whether the player has fallen below the allowed Y position.
+        if (transform.position.y < fallLimitY)
+        {
+            // Stop the player's current movement before teleporting.
+            body.velocity = Vector2.zero;
+
+            // Move the player back to the respawn point if one is assigned.
+            if (respawnPoint != null)
+            {
+                transform.position = respawnPoint.position;
+            }
+        }
     }
 }
