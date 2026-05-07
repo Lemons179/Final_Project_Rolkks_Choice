@@ -8,9 +8,11 @@ public class GameManager : MonoBehaviour
     // UI script responsible for showing the victory screen.
     [SerializeField] private VictoryUI victoryUI;
     [SerializeField] private GameOverUI gameOverUI;
-    
+
     // Zone that becomes active after all coins are collected.
     [SerializeField] private GameObject victoryZone;
+    // Door object shown while the victory zone is locked.
+    [SerializeField] private GameObject closedDoor;
 
     // Tracks whether the win zone has already been activated.
     private bool victoryZoneActivated = false;
@@ -34,6 +36,12 @@ public class GameManager : MonoBehaviour
         if (victoryZone != null)
         {
             victoryZone.SetActive(false);
+        }
+
+        // Show the closed door when the level begins.
+        if (closedDoor != null)
+        {
+            closedDoor.SetActive(true);
         }
     }
 
@@ -61,6 +69,12 @@ public class GameManager : MonoBehaviour
         if (victoryZone != null)
         {
             victoryZone.SetActive(true);
+        }
+
+        // Hide the closed door after all coins are collected.
+        if (closedDoor != null)
+        {
+            closedDoor.SetActive(false);
         }
     }
 
