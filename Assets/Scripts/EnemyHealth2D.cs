@@ -21,7 +21,7 @@ public class EnemyHealth2D : MonoBehaviour
         if (health <= 0)
         {
             //play death sound
-            soundFXManager.instance.PlaySoundFXClip(enemyHitSound, transform, 1f);
+            soundFXManager.instance.PlaySoundFXClip(enemydeathSound, transform, 1f);
 
             EnemyAI2D ai = GetComponent<EnemyAI2D>();
             if (ai != null)

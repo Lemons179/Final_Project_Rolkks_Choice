@@ -19,7 +19,7 @@ public class PlayerShoot2D : MonoBehaviour
         if (Input.GetMouseButton(0) && Time.time >= nextShootTime)
         {
             //play coin sound
-            soundFXManager.instance.PlaySoundFXClip(narwhalsound, transform, 1f);
+            soundFXManager.instance.PlaySoundFXClip(narwhalsound, transform, .1f);
 
             Shoot();
             nextShootTime = Time.time + shootCooldown;
