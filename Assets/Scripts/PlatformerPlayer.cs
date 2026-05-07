@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 
 public class PlatformerPlayer : MonoBehaviour
 {
+    [SerializeField] private AudioClip[] jumps;
 
     public float speed = 4.5f;
     public float jumpForce = 12f;
@@ -95,6 +96,8 @@ public class PlatformerPlayer : MonoBehaviour
                 body.velocity = new Vector2(body.velocity.x, 0); // Cancel falling speed before jumping
                 body.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 extraJumpsRemaining--;
+                //jump sounds
+                SoundFXManager.instance.PlayRandomSoundFXClip(jumps, transform, 1f);
             }
         }
         

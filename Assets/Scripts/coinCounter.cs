@@ -6,6 +6,8 @@ using TMPro;
 
 public class coinCounter : MonoBehaviour
 {
+    //audio 
+    //[SerializeField] private AudioClip coinsound;
     TMP_Text counterText;
 
     // Start is called before the first frame update
@@ -17,6 +19,8 @@ public class coinCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //play coin sound
+        //SoundFXManager.instance.PlayCoinClip(coinsound, transform, 1f);
         //Set the current number of coins to display
         if (counterText.text != Coin2D.totalCoins.ToString())
         {

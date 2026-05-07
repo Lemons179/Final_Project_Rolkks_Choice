@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Coin2D : MonoBehaviour
-{ 
+{
+    //audio 
+    [SerializeField] private AudioClip coinsound;
+
     public static int totalCoins = 0;
     
     void Awake()
@@ -11,6 +14,7 @@ public class Coin2D : MonoBehaviour
         Collider2D coinCollider = GetComponent<CircleCollider2D>();
         if (coinCollider != null)
         {
+
             coinCollider.isTrigger = true;
         }
     }
@@ -19,6 +23,8 @@ public class Coin2D : MonoBehaviour
     {
         if (other.CompareTag("Player") || other.CompareTag("player"))
         {
+            //play coin sound
+            SoundFXManager.instance.PlayCoinClip(coinsound, transform, 1f);
             totalCoins++;
             Destroy(gameObject);
         }
