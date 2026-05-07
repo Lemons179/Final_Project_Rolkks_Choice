@@ -6,6 +6,12 @@ public class PlayerHealth2D : MonoBehaviour
 {
     public int maxHealth = 5;
     private int currentHealth;
+    
+    // Current player health value exposed for UI display.
+    public int CurrentHealth
+    {
+        get { return currentHealth; }
+    }
 
     void Start()
     {
@@ -28,8 +34,11 @@ public class PlayerHealth2D : MonoBehaviour
     {
         Debug.Log("Player died");
 
-        // simple version
-        gameObject.SetActive(false);
+        // Trigger the game over state.
+        if (GameManager.instance != null)
+        {
+            GameManager.instance.GameOver();
+        }
 
     }
 }

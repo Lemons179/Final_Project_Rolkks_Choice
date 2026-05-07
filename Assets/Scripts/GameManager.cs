@@ -96,15 +96,4 @@ public class GameManager : MonoBehaviour
             gameOverUI.ShowGameOver();
         }
     }
-
-
-    // REMOVE WHEN REAL IMPLEMENTATION OF GAME OVER IS CREATED
-    void Update()
-    {
-        // Temporary test input for game over.
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            GameOver();
-        }
-    }
 }
