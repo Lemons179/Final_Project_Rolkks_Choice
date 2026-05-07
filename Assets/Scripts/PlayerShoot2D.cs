@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerShoot2D : MonoBehaviour
 {
+    //audio 
+    [SerializeField] private AudioClip narwhalsound;
+
     public GameObject projectilePrefab;
     public Transform firePoint;
     public float projectileSpeed = 10f;
@@ -15,6 +18,9 @@ public class PlayerShoot2D : MonoBehaviour
     {
         if (Input.GetMouseButton(0) && Time.time >= nextShootTime)
         {
+            //play coin sound
+            soundFXManager.instance.PlaySoundFXClip(narwhalsound, transform, 1f);
+
             Shoot();
             nextShootTime = Time.time + shootCooldown;
         }
