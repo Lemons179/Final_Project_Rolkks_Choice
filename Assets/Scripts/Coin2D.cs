@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Coin2D : MonoBehaviour
 {
+    //audio 
+    [SerializeField] private AudioClip coinsound;
+
     public static int collectedCoins = 0;
     public static int maxCoins = 0;
 
@@ -20,6 +23,10 @@ public class Coin2D : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            //play coin sound
+            soundFXManager.instance.PlaySoundFXClip(coinsound, transform, 1f);
+
+
             // Increase the collected coin count.
             collectedCoins++;
 
