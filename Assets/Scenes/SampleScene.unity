@@ -289,6 +289,7 @@ MonoBehaviour:
   startMenuButton: {fileID: 703148343}
   resetButton: {fileID: 635318773}
   startMenuSceneName: StartMenu
+  playerShoot: {fileID: 1862902838}
 --- !u!4 &8405713
 Transform:
   m_ObjectHideFlags: 0
@@ -13199,6 +13200,7 @@ MonoBehaviour:
   startMenuButton: {fileID: 786001318}
   resetButton: {fileID: 1228419657}
   startMenuSceneName: StartMenu
+  playerShoot: {fileID: 1862902838}
 --- !u!4 &1593456370
 Transform:
   m_ObjectHideFlags: 0

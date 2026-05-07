@@ -16,6 +16,9 @@ public class GameOverUI : MonoBehaviour
     // Name of the start menu scene.
     [SerializeField] private string startMenuSceneName = "StartMenu";
 
+    // Player shooting script disabled when the game over screen is shown.
+    [SerializeField] private PlayerShoot2D playerShoot;
+
     void Start()
     {
         // Hide the game over panel when the scene starts.
@@ -50,6 +53,12 @@ public class GameOverUI : MonoBehaviour
         // Show the cursor for UI interaction.
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        // Disable player shooting during the game over state.
+        if (playerShoot != null)
+        {
+            playerShoot.enabled = false;
+        }
     }
 
     private void HideGameOverPanel()

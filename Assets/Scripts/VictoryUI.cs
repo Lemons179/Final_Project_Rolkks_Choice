@@ -16,6 +16,9 @@ public class VictoryUI : MonoBehaviour
     // Name of the main menu scene.
     [SerializeField] private string startMenuSceneName = "StartMenu";
 
+    // Player shooting script disabled when the victory screen is shown.
+    [SerializeField] private PlayerShoot2D playerShoot;
+
     void Start()
     {
         // Hide the victory panel when the scene starts.
@@ -50,6 +53,12 @@ public class VictoryUI : MonoBehaviour
         // Show the cursor for UI interaction.
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        // Disable player shooting during the victory state.
+        if (playerShoot != null)
+        {
+            playerShoot.enabled = false;
+        }
     }
 
     private void HideVictoryPanel()
