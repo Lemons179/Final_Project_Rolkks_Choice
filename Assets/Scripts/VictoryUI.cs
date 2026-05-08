@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 public class VictoryUI : MonoBehaviour
 {
+    //audio 
+    [SerializeField] private AudioClip victorySound;
+
     // UI group containing the victory screen.
     [SerializeField] private CanvasGroup victoryPanel;
 
@@ -45,6 +48,8 @@ public class VictoryUI : MonoBehaviour
         // Show the victory panel.
         if (victoryPanel != null)
         {
+            //play victory sound
+            soundFXManager.instance.PlaySoundFXClip(victorySound, transform, 1f);
             victoryPanel.alpha = 1f;
             victoryPanel.interactable = true;
             victoryPanel.blocksRaycasts = true;

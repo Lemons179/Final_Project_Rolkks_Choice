@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class PlayerHealth2D : MonoBehaviour
 {
+    //audio 
+    [SerializeField] private AudioClip playerHitSound;
+
+    //audio 
+    [SerializeField] private AudioClip playerDeathSound;
+
     public int maxHealth = 5;
     private int currentHealth;
     
@@ -20,12 +26,18 @@ public class PlayerHealth2D : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+
+        //play hit sound
+        soundFXManager.instance.PlaySoundFXClip(playerHitSound, transform, 1f);
+
         currentHealth -= damage;
 
         Debug.Log("Player Health: " + currentHealth);
 
         if (currentHealth <= 0)
         {
+            //play death sound
+            soundFXManager.instance.PlaySoundFXClip(playerDeathSound, transform, 1f);
             Die();
         }
     }

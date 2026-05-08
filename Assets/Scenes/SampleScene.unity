@@ -285,6 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de18bc1b5127e34469043f3281161823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameOverSound: {fileID: 8300000, guid: 0562c7053d110ae439a8ad444b740af4, type: 3}
   gameOverPanel: {fileID: 726722161}
   startMenuButton: {fileID: 703148343}
   resetButton: {fileID: 635318773}
@@ -11140,7 +11141,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3bd057a75536f1641afae18845b488a6, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.183
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -11234,9 +11235,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 488bfeb82ee95d8498dd534cd4906c10, type: 3}
+  m_audioClip: {fileID: 8300000, guid: df92f3bb62c889249ad53f8863beb44c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.176
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -13196,6 +13197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da6dc371ea229e4eaef5a989ef37825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  victorySound: {fileID: 8300000, guid: aab4a7b5d7101764585495da9db5daa3, type: 3}
   victoryPanel: {fileID: 847176703}
   startMenuButton: {fileID: 786001318}
   resetButton: {fileID: 1228419657}
@@ -13925,6 +13927,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6a7d9fdabf2b0404ea6d4d6ad6420dc0, type: 3}
   - {fileID: 8300000, guid: 7af1fe320b4715e458a2959437babcf7, type: 3}
   - {fileID: 8300000, guid: 51805a596594f1e44aeb78e0d84f0e18, type: 3}
+  dashSound: {fileID: 8300000, guid: 8343d8ec2d6994f4fa84d2da80e337ec, type: 3}
   speed: 4.5
   jumpForce: 12
   extraJumpsMax: 1
@@ -13965,6 +13968,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f25511a171925f946aadcf9fbaad30a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHitSound: {fileID: 8300000, guid: 8b3cbff5a50a42d4687b0646fe32f991, type: 3}
+  playerDeathSound: {fileID: 8300000, guid: ce3fe3ad0b842c04badc7061d2a8cf64, type: 3}
   maxHealth: 10
 --- !u!114 &1862902838
 MonoBehaviour:
@@ -13978,6 +13983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b1a70addc08af34caacbc1248cbcb1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  narwhalsound: {fileID: 8300000, guid: c6953162819d16247b108d40f45193de, type: 3}
   projectilePrefab: {fileID: 1175212079064335776, guid: 3384e84e2fb776b47aee6d65bc3ab9a9, type: 3}
   firePoint: {fileID: 276128726}
   projectileSpeed: 10

@@ -216,4 +216,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88667989bf1436c408edca5f75a8c457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyHitSound: {fileID: 8300000, guid: 8b3cbff5a50a42d4687b0646fe32f991, type: 3}
+  enemydeathSound: {fileID: 8300000, guid: 75fe748de30efdd42b5bd72fd7b013ba, type: 3}
   health: 3

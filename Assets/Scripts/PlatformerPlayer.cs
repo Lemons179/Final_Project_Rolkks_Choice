@@ -8,6 +8,9 @@ public class PlatformerPlayer : MonoBehaviour
     // jump sounds
     [SerializeField] private AudioClip[] jumps;
 
+    //audio 
+    [SerializeField] private AudioClip dashSound;
+
     public float speed = 4.5f;
     public float jumpForce = 12f;
     public int extraJumpsMax = 1;
@@ -118,6 +121,8 @@ public class PlatformerPlayer : MonoBehaviour
 
         if (Input.GetKeyDown(dashKey) && CanDash(grounded))
         {
+            //dash sound
+            soundFXManager.instance.PlaySoundFXClip(dashSound, transform, 1f);
             StartCoroutine(Dash(grounded));
         }
     }

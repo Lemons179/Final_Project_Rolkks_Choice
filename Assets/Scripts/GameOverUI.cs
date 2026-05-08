@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 public class GameOverUI : MonoBehaviour
 {
+    //audio 
+    [SerializeField] private AudioClip GameOverSound;
+
     // UI group containing the game over screen.
     [SerializeField] private CanvasGroup gameOverPanel;
 
@@ -45,6 +48,9 @@ public class GameOverUI : MonoBehaviour
         // Show the game over panel.
         if (gameOverPanel != null)
         {
+            //play game over sound
+            soundFXManager.instance.PlaySoundFXClip(GameOverSound, transform, 1f);
+
             gameOverPanel.alpha = 1f;
             gameOverPanel.interactable = true;
             gameOverPanel.blocksRaycasts = true;
