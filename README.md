@@ -13,8 +13,8 @@ MADE BY:<br/>
 CREDITS:<br/>
 **Tilemap & map decor:** https://assetstore.unity.com/packages/2d/environments/pixel-art-woods-tileset-and-background-280066<br/>
 **Background sounds & Coin collection sounds:** https://pixabay.com/sound-effects/search/tunnel/ & https://pixabay.com/sound-effects/nature-forest-jungle-nature-dark-atmo-6154/ & https://pixabay.com/sound-effects/film-special-effects-collectcoin-6075/<br/>
-**Victory Sound: https:** //pixabay.com/sound-effects/musical-medieval-fanfare-6826/<br/>
-**Game Over Sound: https:** //pixabay.com/sound-effects/film-special-effects-8-bit-game-over-sound-effect-331435/<br/>
+**Victory Sound:** https://pixabay.com/sound-effects/musical-medieval-fanfare-6826/<br/>
+**Game Over Sound:** https://pixabay.com/sound-effects/film-special-effects-8-bit-game-over-sound-effect-331435/<br/>
 **Player & Enemy sound effects:** Made by Alvaro through editing existing sound clip such as this: https://www.youtube.com/watch?v=Lg9dm_OE3bo with this site: https://sfbgames.itch.io/chiptone<br/>
 **Enemy Sprite:** https://assetstore.unity.com/packages/2d/characters/monsters-creatures-fantasy-167949<br/>
 **Player Projectile Sprite:** https://www.amazon.com/ETAOLINE-Chubby-Pillow-Stuffed-Animals/dp/B08399XCJ1?th=1 altered by Jack in Paint.NET<br/>
